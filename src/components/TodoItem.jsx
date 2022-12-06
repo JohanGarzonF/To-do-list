@@ -20,7 +20,7 @@ const TodoItem = ({ todo, completeTodo, deleteTodo }) => {
         >
           <i className="fa-solid fa-check"></i></button>
       </div>
-      <p className={`${todo.completed && 'check-p--active'}`}>{todo.text}</p>
+      <p className={`${todo.completed && 'check-p--active'} text-todo`}>{todo.text}</p>
       <button
         className={`trash-button ${todo.completed && 'check-trash--active'}`}
         onClick={onDelete}

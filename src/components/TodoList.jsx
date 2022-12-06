@@ -9,7 +9,7 @@ const TodoList = () => {
 
   return (
     <section className="SectionTodoList">
-      <ul className={`list-container ${loading && 'list-container-img-loading'} ${searchedTodos && 'list-container-img-loading'}`}>
+      <ul className={`list-container ${loading && searchedTodos && 'list-container-img-loading'} ${!loading && !searchedTodos.length && 'todoList-none-task'}`}>
         {loading && <img className='img-loading' src="/public/svg-loading.svg" />}
         {error && (
           <div className='todoList-none-task'>

@@ -38,7 +38,7 @@ const TodoForm = () => {
       )}
       <textarea
         className="form-text-area"
-        placeholder="Terminar curso de React"
+        placeholder="Type a new task"
         value={newTodoValue}
         onChange={onChange}
       />

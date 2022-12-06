@@ -21,3 +21,9 @@
   transform: scale(0.95);
   transition: transform ease .05s;
 }
+
+@media (max-width: 576px) {
+  .CreateTodoButton {
+    width: 40px;
+  }
+}
