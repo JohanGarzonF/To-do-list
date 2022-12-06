@@ -1,0 +1,60 @@
+.form-todo {
+  width: 400px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 15px;
+}
+
+.form-label {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.form-error-message {
+  color: #f83f3f;
+}
+
+.form-text-area {
+  height: 180px;
+  margin: 10px 0;
+  border: 2px solid #1b8fc5;
+  border-radius: 5px;
+  outline: none;
+}
+
+.form-button-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.form-button-container button {
+  cursor: pointer;
+  padding: 8px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.form-add-button {
+  background: #1b8fc5;
+  color: #fff;
+}
+
+.form-add-button:hover {
+  background-color: #25adec;
+}
+
+.form-add-button:active {
+  transform: scale(.98);
+}
+
+@media (max-width: 576px) {
+  .form-todo {
+    width: 90%;
+  }
+}

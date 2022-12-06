@@ -1,0 +1,85 @@
+.item-list {
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  max-width: 300px;
+}
+
+.item-list:hover {
+  transform: scale(1.1);
+}
+
+.check-button-container {
+  background: linear-gradient(to left, #1b8fc5,  #df0f8f);
+  width: 30px;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.check-button,
+.trash-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border-radius: 50%;
+  width:20px;
+  aspect-ratio: 1;
+  border: none;
+  font-size: 12px;
+}
+
+.check-button {
+  background-color: #fff;
+  color: #fff;
+}
+
+.check-item-list--active {
+  background-color: #7c7c7c78;
+}
+
+.check-button--active {
+  background-color: #6bd4df;
+}
+
+.check-button-container,
+.check-button:active {
+  transform: scale(0.95);
+  transition: transform ease .05s;
+}
+
+.check-button:hover {
+  background-color: #6bd4df;
+}
+
+.check-p--active {
+  text-decoration-line: line-through;
+  color: #fff;
+}
+
+.trash-button:hover {
+  color: #f83f3f;
+}
+
+.check-trash--active {
+  color: #fff;
+}
+
+@media (max-width: 576px) {
+  .item-list {
+    max-width: 90%;
+    min-width: none;
+  }
+  .item-list:hover {
+    transform: scale(1.02);
+  }
+}

@@ -1,0 +1,15 @@
+.TitleCounter {
+  display: block;
+  margin: 0;
+  font-size: 32px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.counter-tasks {
+  font-size: 26px;
+  color: #fff;
+  display: inline-block;
+  margin-bottom: 20px;
+}

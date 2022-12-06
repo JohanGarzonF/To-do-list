@@ -1,0 +1,15 @@
+.input-container {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.inputSearch {
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: solid 2px transparent;
+}
+.inputSearch:focus {
+  border: solid 2px #6bd4df;
+}
