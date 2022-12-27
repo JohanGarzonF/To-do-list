@@ -1,0 +1,19 @@
+.alert-changes {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+}
+
+.button-changes {
+  border: none;
+  border-radius: 10px;
+  padding: 8px 15px;
+  font-size: 18px;
+  background: linear-gradient(to left, #0ea1e6,  #1e67c7);
+  color: #fff;
+}
+
+.button-changes:active {
+  transform: scale(.98);
+}

@@ -11,6 +11,8 @@ import { TodosError } from './components/TodosError'
 import { EmptyTodos } from './components/EmptyTodos'
 import { TodosLoading } from './components/TodosLoading'
 import './App.css'
+import { Header } from './components/Header'
+import { ChangeAlert } from './hooks/ChangeAlert'
 
 function App() {
 
@@ -27,11 +29,14 @@ function App() {
     addTodo,
     loading,
     error,
+    synchronizeItem
   } = useTodos()
 
   return (
     <div className="App">
-      <div className="header-container">
+      <Header 
+        loading={loading}
+      >
         <TodoCounter
           totalTodos={totalTodos}
           completedTodos={completedTodos}
@@ -40,15 +45,20 @@ function App() {
           searchValue={searchValue}
           setSearchValue={setSearchValue}
         />
-      </div>
+      </Header>
 
       <TodoList
         searchedTodos={searchedTodos}
+        totalTodos={totalTodos}
+        searchText={searchValue}
         error={error}
         onError={() => <TodosError />}
         loading={loading}
         onLoading={() => <TodosLoading />}
         onEmptyTodos={() => <EmptyTodos />}
+        onEmptySearch={(searchText) => (
+          <p>No results for {searchText}</p>
+        )}
         render={(todo, i) => (
           <TodoItem 
             key={i}
@@ -57,33 +67,24 @@ function App() {
             deleteTodo={deleteTodo}
           />
         )}
-      />
-
-      {/* <TodoList
-        loading={loading}
-        searchedTodos={searchedTodos}
       >
-        {loading && }
-        {error && (
-          
-        )}
-        {(!loading && !searchedTodos.length) && (
-          
-        )}
-        {searchedTodos.map((todo, i) => (
-          <TodoItem
-            key={i}
-            todo={todo}
-            completeTodo={completeTodo}
-            deleteTodo={deleteTodo}
-          />
-        ))}
-      </TodoList> */}
+        {/* {
+          (todo, i) => (
+            <TodoItem 
+              key={i}
+              todo={todo}
+              completeTodo={completeTodo}
+              deleteTodo={deleteTodo}
+            />
+          )
+        } */}
+      </TodoList>
 
       <CreateTodoButton
         openModal={openModal}
         setOpenModal={setOpenModal}
       />
+
 
       {openModal && (
         <Modal>
@@ -93,6 +94,11 @@ function App() {
           />
         </Modal>
       )}
+
+      <ChangeAlert
+        synchronizeItem={synchronizeItem}
+      />
+
     </div>
   )
 }

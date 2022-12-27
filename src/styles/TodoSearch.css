@@ -10,6 +10,12 @@
   border-radius: 10px;
   border: solid 2px transparent;
 }
+
 .inputSearch:focus {
   border: solid 2px #6bd4df;
+}
+
+.inputSearch:disabled {
+  cursor: not-allowed;
+  opacity: 25%;
 }
